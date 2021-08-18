@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interactive_map.controllers.MapController">
+   <top>
+      <AnchorPane prefHeight="33.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backButton" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#backToStartScene" prefHeight="25.0" prefWidth="60.0" text="Back" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <VBox prefHeight="87.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="43.0" prefWidth="750.0">
+               <children>
+                  <Label fx:id="earlyDate" layoutX="62.0" layoutY="13.0" text="2700 BCE" />
+                  <Label fx:id="laterDate" layoutX="642.0" layoutY="13.0" text="Late 1900s" />
+               </children>
+            </AnchorPane>
+            <Slider fx:id="dateSlider" max="25" min="0" onMouseReleased="#onSliderChanged" prefHeight="14.0" prefWidth="689.0" showTickMarks="true" snapToTicks="true">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </Slider>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="305.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="backgroundImage" fitHeight="312.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true">
+               <viewport>
+                  <Rectangle2D height="309.0" width="750.0" />
+               </viewport></ImageView>
+            <Button fx:id="eventButton1" layoutX="395.0" layoutY="153.0" mnemonicParsing="false" onAction="#viewHistoricalEvent" text="The Abacus" />
+            <Button fx:id="eventButton2" layoutX="309.0" layoutY="76.0" mnemonicParsing="false" onAction="#viewHistoricalEvent" text="Ada Lovelace" />
+            <Button fx:id="eventButton3" layoutX="298.0" layoutY="121.0" mnemonicParsing="false" onAction="#viewHistoricalEvent" text="Alan Turing" />
+            <Button fx:id="eventButton4" layoutX="179.0" layoutY="101.0" mnemonicParsing="false" onAction="#viewHistoricalEvent" text="Grace Hopper" />
+            <Button fx:id="eventButton5" layoutX="327.0" layoutY="101.0" mnemonicParsing="false" onAction="#viewHistoricalEvent" text="Cambridge" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
